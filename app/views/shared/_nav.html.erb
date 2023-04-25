@@ -11,7 +11,7 @@
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
             <%= link_to "Home", root_path, class: "bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" %>
             <%= link_to "About", about_path, class: "text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" %>
-            <% if @user.present? && @user.id %>
+            <% if Current.user %>
             <%= button_to "Logout", sign_out_path, method: :delete, class: "text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" %>
             <% else %>
             <%= link_to "Signup", sign_up_path, class: "text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" %>
